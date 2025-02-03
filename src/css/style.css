@@ -1,4 +1,9 @@
+@import "./libs/mediaQuery.css";
 @import "./reset/sanitize.css";
 @import "./reset/base.css";
-@import "./constants/text.css";
+@import "./constants/index.css";
+@import "./components/container.css";
+@import "./components/section.css";
+@import "./components/career.css";
 @import "./components/skillList.css";
+@import "./components/works.css";

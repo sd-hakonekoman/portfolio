@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-/* テキスト関連の定数
+/* 定数
    ========================================================================== */
 
 :root {
@@ -18,4 +18,17 @@
   /* Font Family */
   --font-gothic: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN",
     "Hiragino Sans", "BIZ UDPGothic", Meiryo, sans-serif;
+
+  /* Color */
+  --color-black: 8 19 26;
+  --color-black-rgb: rgb(var(--color-black));
+
+  /* 間隔 */
+  --px-page: 14px;
+}
+
+@media (--pc) {
+  :root {
+    --px-page: 25px;
+  }
 }

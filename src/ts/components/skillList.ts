@@ -42,7 +42,9 @@ export const SkillList = () => {
       liEl.innerHTML = "";
 
       // タイトル
-      titleEl.innerHTML = skill.name;
+      titleEl.innerHTML = skill.learning
+        ? `${skill.name}<span class="skillList__smallTitle">（学習中）</span>`
+        : skill.name;
       liEl.appendChild(titleEl);
 
       // 経験年数

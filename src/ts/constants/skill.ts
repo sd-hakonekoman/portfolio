@@ -31,7 +31,7 @@ export const SKILLS: Skills = {
         name: "Pug",
         years: 8,
         description:
-          "HTMLの実装には主にPugを使用しています。コンポーネント毎にファイルを分割することで可読性を向上させ、保守性の高いコードを実現しています。",
+          "HTMLの実装には主にPugを使用しています。<br>コンポーネント毎にファイルを分割することで可読性を向上させ、保守性の高いコードを実現しています。",
       },
     ],
   },
@@ -42,25 +42,25 @@ export const SKILLS: Skills = {
         name: "CSS",
         years: 8,
         description:
-          "CSSカスタムプロパティを活用し、柔軟で管理しやすいスタイル設計を行っています。またCSS Grid Layoutを用いて効率的かつ直感的なレイアウトを実装しています。classの命名規則はBEMベースです。",
+          "CSSカスタムプロパティを活用し、柔軟で管理しやすいスタイル設計を行っています。<br>またCSS Grid Layoutを用いて効率的かつ直感的なレイアウトを実装しています。<br>classの命名規則はBEMベースです。",
       },
       {
         name: "PostCSS",
         years: 8,
         description:
-          "PostCSSを活用し、ベンダープレフィックスの自動付与を行うことで、幅広いブラウザへの対応を実現しています。またメディアクエリを整理し、任意の名前を付けることで、管理しやすいスタイル設計を心がけています。",
+          "PostCSSを活用し、ベンダープレフィックスの自動付与を行うことで、幅広いブラウザへの対応を実現しています。<br>またメディアクエリを整理し、任意の名前を付けることで、管理しやすいスタイル設計を心がけています。",
       },
       {
         name: "SCSS",
         years: 8,
         description:
-          "Dart Sassを使用しています。コンポーネント毎にファイルを分割することで可読性を向上させ、管理しやすいコードを実現しています。",
+          "Dart Sassを使用しています。<br>コンポーネント毎にファイルを分割することで可読性を向上させ、管理しやすいコードを実現しています。",
       },
       {
         name: "Tailwind CSS",
         years: 1,
         description:
-          "プロジェクトに応じてTailwind CSSを使用することがあります。必要に応じて、コンポーネント毎のマージンのみをTailwind CSSで実装するなど、柔軟なスタイル設計を行っています。",
+          "プロジェクトに応じてTailwind CSSを使用することがあります。<br>必要に応じて、コンポーネント毎のマージンのみをTailwind CSSで実装するなど、柔軟なスタイル設計を行っています。",
       },
     ],
   },
@@ -71,12 +71,12 @@ export const SKILLS: Skills = {
         name: "JavaScript",
         years: 8,
         description:
-          "ES6+の構文を用いて実装を行っています。またGSAPを使用したアニメーションの実装も行っています。",
+          "ES6+の構文を用いて実装を行っています。<br>またGSAPを使用したアニメーションの実装も行っています。",
       },
       {
         name: "TypeScript",
         description:
-          "参考書などで勉強中です。型定義を意識した実装を心がけ、より安全で保守性の高いコードを書くことを目指しています。",
+          "参考書などで学習中です。<br>型定義を意識した実装を心がけ、より安全で保守性の高いコードを書くことを目指しています。",
         learning: true,
       },
     ],
@@ -103,19 +103,19 @@ export const SKILLS: Skills = {
       },
       {
         name: "React",
-        description: "参考書で勉強中です。",
+        description: "参考書で学習中です。",
         learning: true,
       },
       {
         name: "Next.js",
-        description: "参考書で勉強中です。",
+        description: "参考書で学習中です。",
         learning: true,
       },
       {
         name: "Astro",
         years: "2ヶ月",
         description:
-          "チュートリアルを学習済みです。実務ではサイトの修正対応やAstroのバージョンアップ対応を行いました。",
+          "チュートリアルを学習済みです。<br>実務ではサイトの修正対応やAstroのバージョンアップ対応を行いました。",
       },
     ],
   },
@@ -126,11 +126,11 @@ export const SKILLS: Skills = {
         name: "WordPress",
         years: 8,
         description:
-          "オリジナルテーマの制作が可能です。ただしブロックテーマでの実装経験はありません。",
+          "オリジナルテーマの制作が可能です。<br>ただしブロックテーマでの実装経験はありません。",
       },
       {
         name: "microCMS",
-        description: "参考書で勉強中です。",
+        description: "参考書で学習中です。",
         learning: true,
       },
     ],
@@ -142,7 +142,7 @@ export const SKILLS: Skills = {
         name: "Git / GitHub",
         years: 8,
         description:
-          "案件のソースコード管理に使用しています。Gitコマンドでコミットなどの操作ができます。",
+          "案件のソースコード管理に使用しています。<br>Gitコマンドでコミットなどの操作ができます。",
       },
       {
         name: "npm",
@@ -153,12 +153,12 @@ export const SKILLS: Skills = {
       {
         name: "Webpack",
         years: 8,
-        description: "Pug, SCSS, PostCSS, Babelのビルドを行っています。",
+        description: "Pug、SCSS、PostCSS、Babelのビルドを行っています。",
       },
       {
         name: "Vite",
         description:
-          "勉強中です。ポートフォリオサイトで実際に使用してみたりしています。",
+          "学習中です。<br>ポートフォリオサイトで実際に使用してみたりしています。",
         learning: true,
       },
     ],

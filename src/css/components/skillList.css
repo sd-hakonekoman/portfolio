@@ -17,3 +17,15 @@
     margin-inline-start: 0;
   }
 }
+
+.skillList__item {
+  > *:not(h3) {
+    margin-inline-start: 1em;
+  }
+}
+
+.skillList__smallTitle {
+  padding-inline-start: 0.5em;
+  font-size: 0.7em;
+  font-weight: normal;
+}

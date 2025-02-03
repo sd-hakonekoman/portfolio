@@ -1,0 +1,15 @@
+@charset "UTF-8";
+
+/* メディアクエリで使用するブレイクポイント
+   ========================================================================== */
+@custom-media --pc (width >= 1024px);
+@custom-media --max-pc not all and (width >= 1024px);
+
+/* hover動作が使えるPC */
+@custom-media --hover (hover: hover) and (pointer: fine);
+
+/* hoverができない端末（スマホ、タブレット） */
+@custom-media --hover-none (hover: none);
+
+/* ダークモード */
+@custom-media --dark (prefers-color-scheme: dark);
