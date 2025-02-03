@@ -1,0 +1,4 @@
+@import "./reset/sanitize.css";
+@import "./reset/base.css";
+@import "./constants/text.css";
+@import "./components/skillList.css";

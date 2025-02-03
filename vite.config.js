@@ -1,8 +1,10 @@
-import tailwindcss from "@tailwindcss/vite";
+import { defineConfig } from "vite";
 
-export default {
+export default defineConfig({
+  root: "src",
+  envDir: "../",
   build: {
+    outDir: "../dist",
     cssMinify: false, // CSSの圧縮を無効化
   },
-  plugins: [tailwindcss()],
-};
+});

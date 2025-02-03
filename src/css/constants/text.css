@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+/* テキスト関連の定数
+   ========================================================================== */
+
+:root {
+  /* Font Weight */
+  --font-thin: 100; /* Thin (Hairline) */
+  --font-extra-light: 200; /* Extra Light (Ultra Light) */
+  --font-light: 300;
+  --font-normal: 400; /* Regular */
+  --font-medium: 500;
+  --font-semi-bold: 600; /* Semi Bold (Demi Bold) */
+  --font-bold: 700;
+  --font-extra-bold: 800; /* Extra Bold (Ultra Bold) */
+  --font-black: 900; /* Black (Heavy) */
+
+  /* Font Family */
+  --font-gothic: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans", "BIZ UDPGothic", Meiryo, sans-serif;
+}

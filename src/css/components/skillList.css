@@ -1,0 +1,19 @@
+.skillList {
+  padding-inline-start: 0;
+  list-style-type: none;
+}
+
+.skillList__years {
+  display: flex;
+  align-items: baseline;
+  column-gap: 1em;
+
+  > .__title::after {
+    content: ":";
+    margin-inline-start: 0.25em;
+  }
+
+  > .__year {
+    margin-inline-start: 0;
+  }
+}
