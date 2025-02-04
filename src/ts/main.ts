@@ -1,4 +1,4 @@
 import "../css/style.css";
-import { SkillList } from "./components/skillList";
+import { Skills } from "./components/skills";
 
-SkillList();
+Skills();

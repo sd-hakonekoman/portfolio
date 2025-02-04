@@ -1,9 +1,22 @@
-.skillList {
+.skills__title {
+  margin-block-start: 2.5rem;
+}
+
+.skills__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 1rem;
   padding-inline-start: 0;
   list-style-type: none;
 }
 
-.skillList__years {
+.skills__item {
+  padding: 10px;
+  border: 1px solid #000;
+  border-radius: 5px;
+}
+
+.skills__years {
   display: flex;
   align-items: baseline;
   column-gap: 1em;
@@ -18,13 +31,13 @@
   }
 }
 
-.skillList__item {
+.skills__item {
   > *:not(h3) {
     margin-inline-start: 1em;
   }
 }
 
-.skillList__smallTitle {
+.skills__smallTitle {
   padding-inline-start: 0.5em;
   font-size: 0.7em;
   font-weight: normal;

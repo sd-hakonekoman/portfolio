@@ -9,6 +9,7 @@ type Skill = {
 };
 
 type SkillCategory = {
+  title: string; // スキルのカテゴリー名
   description?: string; // スキルのカテゴリーの説明
   list: Skill[];
 };
@@ -19,7 +20,7 @@ type Skills = {
 
 export const SKILLS: Skills = {
   html: {
-    description: "",
+    title: "HTML関連",
     list: [
       {
         name: "HTML",
@@ -36,7 +37,7 @@ export const SKILLS: Skills = {
     ],
   },
   css: {
-    description: "",
+    title: "CSS関連",
     list: [
       {
         name: "CSS",
@@ -65,7 +66,7 @@ export const SKILLS: Skills = {
     ],
   },
   js: {
-    description: "",
+    title: "JavaScript関連",
     list: [
       {
         name: "JavaScript",
@@ -82,7 +83,7 @@ export const SKILLS: Skills = {
     ],
   },
   php: {
-    description: "",
+    title: "PHP",
     list: [
       {
         name: "PHP",
@@ -93,7 +94,7 @@ export const SKILLS: Skills = {
   },
   framework: {
     // ライブラリとフレームワーク
-    description: "",
+    title: " ライブラリ・フレームワーク",
     list: [
       {
         name: "jQuery",
@@ -120,7 +121,7 @@ export const SKILLS: Skills = {
     ],
   },
   cms: {
-    description: "",
+    title: "CMS",
     list: [
       {
         name: "WordPress",
@@ -136,7 +137,7 @@ export const SKILLS: Skills = {
     ],
   },
   tools: {
-    description: "ツール",
+    title: "ツール",
     list: [
       {
         name: "Git / GitHub",
@@ -164,8 +165,9 @@ export const SKILLS: Skills = {
     ],
   },
   designTools: {
+    title: "デザインツール",
     description:
-      "デザインツール<br>デザインデータからコーディングをするために使用。メインに使用していたのはFigmaとXDです。",
+      "デザインデータからコーディングをするために使用。メインに使用していたのはFigmaとXDです。",
     list: [
       {
         name: "Figma",
