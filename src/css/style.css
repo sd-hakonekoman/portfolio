@@ -1,10 +1,16 @@
-@import "./libs/mediaQuery.css";
-@import "./reset/sanitize.css";
-@import "./reset/base.css";
-@import "./constants/index.css";
-@import "./components/container.css";
-@import "./components/section.css";
-@import "./components/career.css";
-@import "./components/skills.css";
-@import "./components/works.css";
-@import "./components/mv.css";
+@layer main, utilities;
+
+@import "./libs/mediaQuery.css" layer(main);
+@import "./reset/sanitize.css" layer(main);
+@import "./reset/base.css" layer(main);
+@import "./constants/index.css" layer(main);
+@import "./components/container.css" layer(main);
+@import "./components/section.css" layer(main);
+@import "./components/career.css" layer(main);
+@import "./components/skills.css" layer(main);
+@import "./components/works.css" layer(main);
+@import "./components/mv.css" layer(main);
+@import "./components/header.css" layer(main);
+@import "./components/inert.css" layer(main);
+
+@import "./utilities/index.css" layer(utilities);

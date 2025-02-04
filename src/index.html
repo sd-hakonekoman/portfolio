@@ -8,6 +8,39 @@
     <script type="module" src="/ts/main.ts" defer></script>
   </head>
   <body>
+    <header class="header" id="header">
+      <button
+        type="button"
+        aria-expanded="false"
+        aria-controls="menu"
+        class="header__button js-menuButton"
+      >
+        <img
+          src="./images/icon_bars.svg"
+          alt="メニュー"
+          width="10"
+          height="10"
+          decoding="async"
+          class="__open"
+        />
+        <img
+          src="./images/icon_xmark.svg"
+          alt="メニュー"
+          width="10"
+          height="10"
+          decoding="async"
+          class="__close u-hidden"
+        />
+      </button>
+      <nav class="header__nav" id="menu">
+        <ul class="header__list">
+          <li><a href="#profile" class="js-menuButton">プロフィール</a></li>
+          <li><a href="#career" class="js-menuButton">経歴</a></li>
+          <li><a href="#skill" class="js-menuButton">スキルセット</a></li>
+          <li><a href="#works" class="js-menuButton">制作実績</a></li>
+        </ul>
+      </nav>
+    </header>
     <main class="container">
       <div class="mv">
         <h1 class="mv__title">%VITE_SITE_TITLE%</h1>
@@ -61,7 +94,7 @@
       </section>
 
       <section class="section career" id="career">
-        <h2>経歴の概要</h2>
+        <h2>経歴</h2>
         <h3>2010年 - 2014年</h3>
         <p>
           システム開発会社に入社。
