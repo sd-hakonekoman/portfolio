@@ -1,0 +1,14 @@
+.mv {
+  background-color: rgb(var(--color-black) / 0.05);
+  border-radius: 20px;
+  padding: 30px;
+  /* text-align: center; */
+
+  > :last-child {
+    margin-block-end: 0;
+  }
+}
+
+.mv__title {
+  margin-block-start: 0;
+}

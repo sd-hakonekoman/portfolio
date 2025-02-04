@@ -16,6 +16,7 @@ body {
   font-family: var(--font-gothic);
   color: var(--color-black-rgb);
   font-size: 1rem;
+  letter-spacing: 0.05em;
 
   /* 【注意】：antialiased を設定するとスッキリとした見た目にはなるものの、文字の印象が弱めになり、背景色とのコントラスト等により見難くなる場合がある。 */
   /*
@@ -31,4 +32,12 @@ body {
 
 p {
   line-height: 1.8;
+}
+
+a[target="_blank"] {
+  > svg {
+    vertical-align: baseline;
+    margin-inline-start: 0.2rem;
+    width: 0.8em;
+  }
 }
