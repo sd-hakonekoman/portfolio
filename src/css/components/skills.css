@@ -14,6 +14,14 @@
   padding: 10px;
   border: 1px solid #000;
   border-radius: 5px;
+
+  > *:not(h3) {
+    margin-inline-start: 1em;
+  }
+
+  > *:last-child {
+    margin-block-end: 1em;
+  }
 }
 
 .skills__years {
@@ -28,12 +36,6 @@
 
   > .__year {
     margin-inline-start: 0;
-  }
-}
-
-.skills__item {
-  > *:not(h3) {
-    margin-inline-start: 1em;
   }
 }
 
