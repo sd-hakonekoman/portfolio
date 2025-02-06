@@ -13,5 +13,6 @@
 @import "./components/header.css" layer(main);
 @import "./components/inert.css" layer(main);
 @import "./components/footer.css" layer(main);
+@import "./components/profile.css" layer(main);
 
 @import "./utilities/index.css" layer(utilities);

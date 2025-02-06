@@ -1,0 +1,13 @@
+.profile__list {
+  > li + li {
+    margin-block-start: 1em;
+  }
+}
+
+@media (--pc) {
+  .profile__list {
+    > li + li {
+      margin-block-start: 0.5em;
+    }
+  }
+}
