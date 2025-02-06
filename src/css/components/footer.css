@@ -1,0 +1,10 @@
+.footer {
+  margin-block-start: 80px;
+  border-top: 2px solid var(--color-black-rgb);
+  padding-block: 20px;
+  text-align: center;
+
+  > p {
+    margin: 0;
+  }
+}

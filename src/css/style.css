@@ -12,5 +12,6 @@
 @import "./components/mv.css" layer(main);
 @import "./components/header.css" layer(main);
 @import "./components/inert.css" layer(main);
+@import "./components/footer.css" layer(main);
 
 @import "./utilities/index.css" layer(utilities);
