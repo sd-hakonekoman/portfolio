@@ -32,7 +32,9 @@ function handleClick() {
           });
 
           document.querySelectorAll(`body > *:not(#header)`).forEach((el) => {
-            el.inert = !el.inert;
+            if (el instanceof HTMLElement) {
+              el.inert = !el.inert;
+            }
           });
         }
       });
@@ -63,7 +65,9 @@ function resetMenu() {
       }
 
       document.querySelectorAll(`body > *:not(#header)`).forEach((el) => {
-        el.inert = false;
+        if (el instanceof HTMLElement) {
+          el.inert = false;
+        }
       });
     }
   });

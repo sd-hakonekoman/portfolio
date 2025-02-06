@@ -7,4 +7,7 @@ export default defineConfig({
     outDir: "../dist",
     cssMinify: false, // CSSの圧縮を無効化
   },
+  server: {
+    host: true,
+  },
 });
