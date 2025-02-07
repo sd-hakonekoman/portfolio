@@ -7,7 +7,7 @@ export default defineConfig(({ command }) => {
     envDir: "../",
     base: "./",
     build: {
-      outDir: "../dist",
+      outDir: "../docs",
       emptyOutDir: true, // ビルド前に出力先ディレクトリをクリーンアップ
       cssMinify: false, // CSSの圧縮を無効化
     },
