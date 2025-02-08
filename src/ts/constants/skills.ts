@@ -125,7 +125,7 @@ export const SKILLS: Skills = {
     list: [
       {
         name: "WordPress",
-        years: 8,
+        years: 6,
         description:
           "オリジナルテーマの制作が可能です。<br>ただしブロックテーマでの実装経験はありません。",
       },
