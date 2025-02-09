@@ -103,6 +103,12 @@ export const SKILLS: Skills = {
           "Webサイトの実装で使用していますが、現在はJavaScriptで完結させることが多いです。",
       },
       {
+        name: "Astro",
+        years: "2ヶ月",
+        description:
+          "チュートリアルを学習済みです。<br>実務ではサイトの修正対応やAstroのバージョンアップ対応を行いました。",
+      },
+      {
         name: "React",
         description: "参考書で学習中です。",
         learning: true,
@@ -111,12 +117,6 @@ export const SKILLS: Skills = {
         name: "Next.js",
         description: "参考書で学習中です。",
         learning: true,
-      },
-      {
-        name: "Astro",
-        years: "2ヶ月",
-        description:
-          "チュートリアルを学習済みです。<br>実務ではサイトの修正対応やAstroのバージョンアップ対応を行いました。",
       },
     ],
   },
