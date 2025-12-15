@@ -74,22 +74,12 @@ export const SKILLS: Skills = {
         description:
           "ES6+の構文を用いて実装を行っています。<br>またGSAPを使用したアニメーションの実装も行っています。",
       },
-      {
-        name: "TypeScript",
-        description:
-          "参考書などで学習中です。<br>型定義を意識した実装を心がけ、より安全で保守性の高いコードを書くことを目指しています。",
-        learning: true,
-      },
-    ],
-  },
-  php: {
-    title: "PHP",
-    list: [
-      {
-        name: "PHP",
-        description:
-          "WordPressのオリジナルテーマ実装時に使用した経験があります。",
-      },
+      // {
+      //   name: "TypeScript",
+      //   description:
+      //     "参考書などで学習中です。<br>型定義を意識した実装を心がけ、より安全で保守性の高いコードを書くことを目指しています。",
+      //   learning: true,
+      // },
     ],
   },
   framework: {
@@ -109,14 +99,24 @@ export const SKILLS: Skills = {
           "チュートリアルを学習済みです。<br>実務ではサイトの修正対応やAstroのバージョンアップ対応を行いました。",
       },
       {
+        name: "Vue.js (v2)",
+        years: "2ヶ月",
+        description: "LP制作で使用した経験があります。<br>既存LPの改修対応、既存LPを流用した新規LPの制作を行いました。",
+      },
+      {
+        name: "Nuxt.js",
+        years: "2ヶ月",
+        description: "LP制作で使用した経験があります。<br>既存LPの改修対応、既存LPを流用した新規LPの制作を行いました。",
+      },
+      {
         name: "React",
-        description: "参考書で学習中です。",
-        learning: true,
+        years: "2ヶ月",
+        description: "LP制作で使用した経験があります。<br>既存LPの改修対応、既存LPを流用した新規LPの制作を行いました。",
       },
       {
         name: "Next.js",
-        description: "参考書で学習中です。",
-        learning: true,
+        years: "2ヶ月",
+        description: "LP制作で使用した経験があります。<br>既存LPの改修対応、既存LPを流用した新規LPの制作を行いました。",
       },
     ],
   },
@@ -129,11 +129,11 @@ export const SKILLS: Skills = {
         description:
           "オリジナルテーマの制作が可能です。<br>ただしブロックテーマでの実装経験はありません。",
       },
-      {
-        name: "microCMS",
-        description: "参考書で学習中です。",
-        learning: true,
-      },
+      // {
+      //   name: "microCMS",
+      //   description: "参考書で学習中です。",
+      //   learning: true,
+      // },
     ],
   },
   tools: {

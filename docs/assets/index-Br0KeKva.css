@@ -1,6 +1,4 @@
-@charset "UTF-8";
-@layer main, utilities;
-@layer main{
+@charset "UTF-8";@layer main, utilities;@layer main{
 
 /* メディアクエリで使用するブレイクポイント
    ========================================================================== */
@@ -10,8 +8,7 @@
 /* hoverができない端末（スマホ、タブレット） */
 
 /* ダークモード */
-}
-@layer main{
+}@layer main{
 
 /*! sanitize.css v13.0.0 | CC0 License | github.com/csstools/sanitize.css */
 
@@ -375,8 +372,7 @@
    clip: rect(0, 0, 0, 0);
    position: absolute;
  }
-}
-@layer main{
+}@layer main{
 
 /* リセットCSSに付け加える用のベーススタイル
    ========================================================================== */
@@ -423,8 +419,7 @@ a {
     width: 0.8em;
   }
 }
-}
-@layer main{
+}@layer main{
 
 /* 定数
    ========================================================================== */
@@ -452,14 +447,12 @@ a {
   /* 間隔 */
   --px-page: 14px;
 }
-}
-@layer main{
+}@layer main{
 .container {
   margin-inline: auto;
   width: calc(min(100%, 1200px) - var(--px-page) - var(--px-page));
 }
-}
-@layer main{
+}@layer main{
 .section {
   margin-block-start: 4rem;
 
@@ -468,15 +461,13 @@ a {
     border-bottom: 2px solid rgb(var(--color-black) / 0.5);
   }
 }
-}
-@layer main{
+}@layer main{
 .career {
   > p {
     margin-inline-start: 1em;
   }
 }
-}
-@layer main{
+}@layer main{
 
 .skills__title {
   margin-block-start: 2.5rem;
@@ -525,8 +516,7 @@ a {
   font-size: 0.7em;
   font-weight: normal;
 }
-}
-@layer main{
+}@layer main{
 
 .works {
   display: grid;
@@ -579,8 +569,7 @@ a {
     background-color: #aaa;
   }
 }
-}
-@layer main{
+}@layer main{
 
 .mv {
   background-color: rgb(var(--color-black) / 0.05);
@@ -596,8 +585,7 @@ a {
 .mv__title {
   margin-block-start: 0;
 }
-}
-@layer main{
+}@layer main{
 
 .header {
   position: sticky;
@@ -634,13 +622,11 @@ a {
        object-fit: contain;
   }
 }
-}
-@layer main{
+}@layer main{
 *[inert] {
   filter: blur(4px);
 }
-}
-@layer main{
+}@layer main{
 .footer {
   margin-block-start: 80px;
   border-top: 2px solid var(--color-black-rgb);
@@ -651,16 +637,14 @@ a {
     margin: 0;
   }
 }
-}
-@layer main{
+}@layer main{
 
 .profile__list {
   > li + li {
     margin-block-start: 1em;
   }
 }
-}
-@layer utilities{
+}@layer utilities{
 /* display */
 .u-hidden {
   display: none;
@@ -670,8 +654,7 @@ a {
 .u-overscroll-y-none {
   overscroll-behavior-y: none;
 }
-}
-@media (width >= 768px){
+}@media (width >= 768px){
   :root {
     --px-page: 25px;
   }
@@ -691,8 +674,7 @@ a {
       margin-block-start: 0.5em;
     }
   }
-}
-@media not all and (width >= 768px){
+}@media not all and (width >= 768px){
   .header__button {
     display: block;
     width: 30px;
@@ -713,8 +695,7 @@ a {
     width: 100%;
     padding: 20px;
   }
-}
-@media (hover: hover) and (pointer: fine){
+}@media (hover: hover) and (pointer: fine){
   a {
     transition: opacity 0.2s;
 
