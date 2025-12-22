@@ -24,13 +24,13 @@ export const SKILLS: Skills = {
     list: [
       {
         name: "HTML",
-        years: 8,
+        years: 9,
         description:
           "アクセシビリティに配慮した実装を心がけており、誰にとっても使いやすいWebページを目指しています。",
       },
       {
         name: "Pug",
-        years: 8,
+        years: 9,
         description:
           "HTMLの実装には主にPugを使用しています。<br>コンポーネント毎にファイルを分割することで可読性を向上させ、保守性の高いコードを実現しています。",
       },
@@ -41,7 +41,7 @@ export const SKILLS: Skills = {
     list: [
       {
         name: "CSS",
-        years: 8,
+        years: 9,
         description:
           "CSSカスタムプロパティを活用し、柔軟で管理しやすいスタイル設計を行っています。<br>またCSS Grid Layoutを用いて効率的かつ直感的なレイアウトを実装しています。<br>classの命名規則はBEMベースです。",
       },
@@ -53,7 +53,7 @@ export const SKILLS: Skills = {
       },
       {
         name: "SCSS",
-        years: 8,
+        years: 9,
         description:
           "Dart Sassを使用しています。<br>コンポーネント毎にファイルを分割することで可読性を向上させ、管理しやすいコードを実現しています。",
       },
@@ -70,7 +70,7 @@ export const SKILLS: Skills = {
     list: [
       {
         name: "JavaScript",
-        years: 8,
+        years: 9,
         description:
           "ES6+の構文を用いて実装を行っています。<br>またGSAPを使用したアニメーションの実装も行っています。",
       },
@@ -88,7 +88,7 @@ export const SKILLS: Skills = {
     list: [
       {
         name: "jQuery",
-        years: 8,
+        years: 9,
         description:
           "Webサイトの実装で使用していますが、現在はJavaScriptで完結させることが多いです。",
       },

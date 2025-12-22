@@ -12,7 +12,8 @@ export default defineConfig(({ command }) => {
       cssMinify: false, // CSSの圧縮を無効化
     },
     server: {
-      host: true,
+      host: true, // ローカルIPアドレスでのアクセスを許可
+      open: true, // サーバー起動時にブラウザを自動で開く
     },
   };
 
