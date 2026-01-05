@@ -1,5 +1,11 @@
 .career {
-  > p {
+  dt {
+    font-size: 1.17em;
+    font-weight: bold;
+    margin-block: 1.5em 1em;
+  }
+
+  dd {
     margin-inline-start: 1em;
   }
 }
