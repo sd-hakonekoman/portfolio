@@ -35,7 +35,8 @@ export const Skills = () => {
 
       const liEl = document.createElement("li");
       liEl.classList.add("skills__item");
-      const titleEl = document.createElement("h3");
+      const titleEl = document.createElement("h4");
+      titleEl.classList.add("skills__itemTitle");
       const dlEl = document.createElement("dl");
       dlEl.classList.add("skills__years");
       const dtEl = document.createElement("dt");
