@@ -188,4 +188,29 @@ export const SKILLS: Skills = {
       },
     ],
   },
+  communicationAndTaskManagementTools: {
+    title: "業務コミュニケーション / タスク管理ツール",
+    list: [
+      {
+        name: "Chatwork",
+        description: "社内およびクライアントとの業務連絡に使用しました。",
+      },
+      {
+        name: "Slack",
+        description: "社内およびクライアントとの業務連絡に使用しました。",
+      },
+      {
+        name: "Zoom",
+        description: "主にクライアントとのミーティングに使用しました。",
+      },
+      {
+        name: "Discord",
+        description: "社内メンバー間の業務連絡、技術情報の共有に使用しました。",
+      },
+      {
+        name: "Backlog",
+        description: "業務のタスク管理に使用しました。",
+      },
+    ],
+  },
 };
