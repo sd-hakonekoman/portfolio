@@ -23,4 +23,4 @@
 
 # ブランチ管理方法
 
-Github Flow
+GitHub Flow
