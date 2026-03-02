@@ -1,12 +1,15 @@
-@layer main, utilities;
+@layer reset, main, utilities;
 
-@import "./libs/mediaQuery.css" layer(main);
-@import "./reset/sanitize.css" layer(main);
-@import "./reset/base.css" layer(main);
+/* reset */
+@import "./libs/mediaQuery.css" layer(reset);
+@import "./reset/sanitize.css" layer(reset);
+@import "./reset/base.css" layer(reset);
+
+/* main */
 @import "./constants/index.css" layer(main);
 @import "./components/container.css" layer(main);
 @import "./components/section.css" layer(main);
-@import "./components/career.css" layer(main);
+@import "./components/definitionList.css" layer(main);
 @import "./components/skills.css" layer(main);
 @import "./components/works.css" layer(main);
 @import "./components/mv.css" layer(main);
@@ -15,4 +18,5 @@
 @import "./components/footer.css" layer(main);
 @import "./components/profile.css" layer(main);
 
+/* utilities */
 @import "./utilities/index.css" layer(utilities);
