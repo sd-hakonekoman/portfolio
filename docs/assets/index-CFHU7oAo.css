@@ -1,4 +1,4 @@
-@charset "UTF-8";@layer main, utilities;@layer main{
+@charset "UTF-8";@layer reset, main, utilities;/* reset */@layer reset{
 
 /* メディアクエリで使用するブレイクポイント
    ========================================================================== */
@@ -8,7 +8,7 @@
 /* hoverができない端末（スマホ、タブレット） */
 
 /* ダークモード */
-}@layer main{
+}@layer reset{
 
 /*! sanitize.css v13.0.0 | CC0 License | github.com/csstools/sanitize.css */
 
@@ -372,7 +372,7 @@
    clip: rect(0, 0, 0, 0);
    position: absolute;
  }
-}@layer main{
+}@layer reset{
 
 /* リセットCSSに付け加える用のベーススタイル
    ========================================================================== */
@@ -419,7 +419,7 @@ a {
     width: 0.8em;
   }
 }
-}@layer main{
+}/* main */@layer main{
 
 /* 定数
    ========================================================================== */
@@ -450,26 +450,27 @@ a {
 }@layer main{
 .container {
   margin-inline: auto;
-  width: calc(min(100%, 1200px) - var(--px-page) - var(--px-page));
+  width: min(calc(100% - var(--px-page) * 2), 1200px);
 }
 }@layer main{
+
 .section {
   margin-block-start: 4rem;
+}
 
-  > h2 {
-    padding-block-end: 0.3em;
-    border-bottom: 2px solid rgb(var(--color-black) / 0.5);
-  }
+.section__primaryTitle {
+  padding-block-end: 0.3em;
+  border-bottom: 2px solid rgb(var(--color-black) / 0.5);
 }
 }@layer main{
-.career {
-  dt {
+.definitionList {
+  > dt {
     font-size: 1.17em;
     font-weight: bold;
     margin-block: 1.5em 1em;
   }
 
-  dd {
+  > dd {
     margin-inline-start: 1em;
   }
 }
@@ -656,7 +657,7 @@ a {
     margin-block-start: 1em;
   }
 }
-}@layer utilities{
+}/* utilities */@layer utilities{
 /* display */
 .u-hidden {
   display: none;
@@ -668,7 +669,7 @@ a {
 }
 }@media (width >= 768px){
   :root {
-    --px-page: 25px;
+    --px-page: 30px;
   }
   .header {
     padding-block: 10px;
