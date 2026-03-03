@@ -16,8 +16,13 @@
   --font-black: 900; /* Black (Heavy) */
 
   /* Font Family */
-  --font-gothic: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN",
-    "Hiragino Sans", "BIZ UDPGothic", Meiryo, sans-serif;
+  --font-gothic:
+    "Helvetica Neue",
+    Arial,
+    "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans",
+    "Noto Sans JP",
+    sans-serif;
 
   /* Color */
   --color-black: 8 19 26;
