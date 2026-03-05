@@ -38,6 +38,7 @@
         <ul class="header__list">
           <li><a href="#works" class="js-menuButton">制作実績</a></li>
           <li><a href="#strength" class="js-menuButton">できること</a></li>
+          <li><a href="#process-quality" class="js-menuButton">品質・制作方針</a></li>
           <li><a href="#skill" class="js-menuButton">スキルセット</a></li>
           <li><a href="#career" class="js-menuButton">経歴</a></li>
           <li><a href="#profile" class="js-menuButton">プロフィール</a></li>
@@ -273,6 +274,40 @@
             <p>
               オリジナルテーマ制作や既存サイトの改修において、運用者が更新しやすい管理画面を意識して実装しています。
             </p>
+          </dd>
+        </dl>
+      </section>
+
+      <section class="section" id="process-quality">
+        <h2 class="section__primaryTitle">品質・制作方針</h2>
+        <dl class="definitionList">
+          <dt>保守性を重視したCSS設計</dt>
+          <dd>
+            <p>
+              BEMをベースにクラス設計を行い、コンポーネント単位で管理しています。<br>
+              SCSSを用いた分割構造により、改修時の影響範囲を最小限に抑えることを意識しています。
+            </p>
+          </dd>
+          <dt>画像最適化</dt>
+          <dd>
+            <p>表示速度と画質のバランスを考慮し、画像の形式・容量を適切に選定して実装します。</p>
+            <ul>
+              <li>画像の用途に応じて PNG / JPEG / SVG など適切なフォーマットを使用</li>
+              <li>必要に応じて WebP / AVIF を利用し、ファイルサイズを削減</li>
+              <li>Lazy loading を使用し、初期表示のパフォーマンスを改善</li>
+              <li>width / height を指定しCLS（レイアウトシフト）を防止</li>
+            </ul>
+          </dd>
+          <dt>アクセシビリティ・ユーザビリティ</dt>
+          <dd>
+            <p>ユーザー環境に関わらず利用しやすいWebサイトを目指し、アクセシビリティとユーザビリティに配慮した実装を行います。</p>
+            <ul>
+              <li>セマンティックHTMLを意識したマークアップ</li>
+              <li>見出し構造（h1〜h6）を適切に設計</li>
+              <li>画像には適切な alt 属性を設定</li>
+              <li>キーボード操作に配慮した実装</li>
+              <li>スマートフォンで操作しやすいタップ領域を確保</li>
+            </ul>
           </dd>
         </dl>
       </section>
