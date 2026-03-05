@@ -680,6 +680,13 @@ a {
     margin-block-start: 1em;
   }
 }
+}@layer main{
+
+.list__item {
+  &:not(:first-child) {
+    margin-top: 0.5em;
+  }
+}
 }/* utilities */@layer utilities{
 /* display */
 .u-hidden {
@@ -736,6 +743,9 @@ a {
     background-color: #fff;
     width: 100%;
     padding: 20px;
+  }
+  .list {
+    padding-inline-start: 1em;
   }
 }@media (hover: hover) and (pointer: fine){
   a {
