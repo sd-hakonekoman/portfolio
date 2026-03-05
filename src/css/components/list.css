@@ -1,0 +1,11 @@
+.list__item {
+  &:not(:first-child) {
+    margin-top: 0.5em;
+  }
+}
+
+@media (--max-pc) {
+  .list {
+    padding-inline-start: 1em;
+  }
+}

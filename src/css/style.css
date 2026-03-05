@@ -17,6 +17,7 @@
 @import "./components/inert.css" layer(main);
 @import "./components/footer.css" layer(main);
 @import "./components/profile.css" layer(main);
+@import "./components/list.css" layer(main);
 
 /* utilities */
 @import "./utilities/index.css" layer(utilities);
