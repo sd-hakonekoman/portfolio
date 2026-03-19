@@ -1,4 +1,4 @@
-.header {
+.c-header {
   position: sticky;
   z-index: 1;
   top: 0;
@@ -7,7 +7,7 @@
   background-color: #fff;
 }
 
-.header__list {
+.c-header__list {
   display: grid;
   grid-template-columns: 1fr;
   gap: 20px;
@@ -16,7 +16,7 @@
   text-align: center;
 }
 
-.header__button {
+.c-header__button {
   display: none;
   background-color: transparent;
   border: none;
@@ -31,11 +31,11 @@
   }
 }
 
-.header__repoItem {
+.c-header__repoItem {
   line-height: 1;
 }
 
-.header__repoLink {
+.c-header__repoLink {
   --icon-size: 32px;
   display: inline-flex;
   align-items: center;
@@ -50,11 +50,11 @@
 }
 
 @media (--pc) {
-  .header {
+  .c-header {
     padding-block: 10px;
   }
 
-  .header__list {
+  .c-header__list {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -63,14 +63,14 @@
     gap: 30px;
   }
 
-  .header__repoLink {
+  .c-header__repoLink {
     --icon-size: 24px;
     padding: 0;
   }
 }
 
 @media (--max-pc) {
-  .header__button {
+  .c-header__button {
     display: block;
     width: 30px;
     aspect-ratio: 1;
@@ -79,12 +79,12 @@
     box-sizing: content-box;
 
     /* メニューが閉じている */
-    &[aria-expanded="false"] + .header__nav {
+    &[aria-expanded="false"] + .c-header__nav {
       display: none;
     }
   }
 
-  .header__nav {
+  .c-header__nav {
     position: absolute;
     background-color: #fff;
     width: 100%;

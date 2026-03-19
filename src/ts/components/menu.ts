@@ -20,14 +20,14 @@ function handleClick() {
         // SPのとき
         if (!mediaQueryList.matches) {
           // buttonタグのaria-expandedを切り替える
-          const button = headerEl.querySelector(`.header__button`);
+          const button = headerEl.querySelector(`.c-header__button`);
           if (button) {
             button.ariaExpanded =
               button.ariaExpanded === `true` ? `false` : `true`;
           }
 
           // メニューアイコンを切り替える
-          headerEl.querySelectorAll(`.header__button > img`).forEach((img) => {
+          headerEl.querySelectorAll(`.c-header__button > img`).forEach((img) => {
             img.classList.toggle(`u-hidden`);
           });
 
@@ -46,7 +46,7 @@ function handleClick() {
  * PCに切り替えたときの処理
  */
 function resetMenu() {
-  const button = document.querySelector(`#header .header__button`);
+  const button = document.querySelector(`#header .c-header__button`);
 
   mediaQueryList.addEventListener("change", (e) => {
     if (e.matches) {

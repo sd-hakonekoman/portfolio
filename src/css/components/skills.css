@@ -1,8 +1,8 @@
-.skills__title {
+.c-skills__title {
   margin-block-start: 2.5rem;
 }
 
-.skills__list {
+.c-skills__list {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   grid-gap: 1rem;
@@ -10,7 +10,7 @@
   list-style-type: none;
 }
 
-.skills__item {
+.c-skills__item {
   padding: 10px;
   border: 1px solid #000;
   border-radius: 5px;
@@ -24,13 +24,13 @@
   }
 }
 
-.skills__itemTitle {
+.c-skills__itemTitle {
   margin-block: 1em;
   font-size: 1.17em;
   font-weight: bold;
 }
 
-.skills__years {
+.c-skills__years {
   display: flex;
   align-items: baseline;
   column-gap: 1em;
@@ -45,7 +45,7 @@
   }
 }
 
-.skills__smallTitle {
+.c-skills__smallTitle {
   padding-inline-start: 0.5em;
   font-size: 0.7em;
   font-weight: normal;

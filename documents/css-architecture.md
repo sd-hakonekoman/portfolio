@@ -110,10 +110,10 @@ CSSの詳細度は `@layer` を使用して制御します。
 @layer utilities;
 
 基本的な優先順位  
-foundation  
-layout  
-component  
-utility
+foundations  
+layouts  
+components  
+utilities
 
 # カスタムプロパティ
 

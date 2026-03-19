@@ -1,4 +1,4 @@
-.container {
+.l-container {
   margin-inline: auto;
   width: min(calc(100% - var(--px-page) * 2), 1200px);
 }

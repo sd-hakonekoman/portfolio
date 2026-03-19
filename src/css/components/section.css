@@ -1,8 +1,8 @@
-.section {
+.c-section {
   margin-block-start: 4rem;
 }
 
-.section__primaryTitle {
+.c-section__primaryTitle {
   padding-block-end: 0.3em;
   border-bottom: 2px solid rgb(var(--color-black) / 0.5);
 }
