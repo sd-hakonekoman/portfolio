@@ -7,10 +7,10 @@
 # フォルダ構成
 
 css/
-foundations/
-layouts/
-components/
-utilities/
+├──foundations/
+├──layouts/
+├──components/
+├──utilities/
 
 ## foundations
 
