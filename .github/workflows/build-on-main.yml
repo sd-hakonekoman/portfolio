@@ -5,6 +5,10 @@ on:
     branches:
       - main
 
+concurrency:
+  group: build-on-main-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   build:
     if: github.actor != 'github-actions[bot]'
@@ -46,6 +50,8 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
 
       - name: Download built docs artifact
         uses: actions/download-artifact@v8
@@ -53,7 +59,20 @@ jobs:
           name: built-docs
           path: /tmp/built-docs
 
+      - name: Check whether this run is still current
+        id: current-run
+        run: |
+          git fetch origin main
+          latest_main_sha="$(git rev-parse origin/main)"
+
+          if [ "$latest_main_sha" = "${{ github.sha }}" ]; then
+            echo "is_current=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "is_current=false" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Replace docs with built output
+        if: steps.current-run.outputs.is_current == 'true'
         run: |
           rm -rf docs
           mkdir -p docs
@@ -61,6 +80,7 @@ jobs:
 
       - name: Check for docs changes
         id: docs-changes
+        if: steps.current-run.outputs.is_current == 'true'
         run: |
           if git diff --quiet -- docs; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
