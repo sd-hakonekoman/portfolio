@@ -13,13 +13,13 @@ export const Skills = () => {
 
     // カテゴリー名
     const titleEl = document.createElement("h3");
-    titleEl.classList.add("skills__title");
+    titleEl.classList.add("c-skills__title");
     titleEl.textContent = SKILLS[key].title;
     skillListEl.appendChild(titleEl);
 
     // スキルの説明
     const descriptionEl = document.createElement("p");
-    descriptionEl.classList.add("skills__description");
+    descriptionEl.classList.add("c-skills__description");
     descriptionEl.innerHTML = SKILLS[key].description ?? "";
     if (descriptionEl.innerHTML) {
       skillListEl.appendChild(descriptionEl);
@@ -27,18 +27,18 @@ export const Skills = () => {
 
     // ul作成
     const ulEl = document.createElement("ul");
-    ulEl.classList.add("skills__list");
+    ulEl.classList.add("c-skills__list");
     skillListEl.appendChild(ulEl);
 
     for (const skill of SKILLS[key].list) {
       console.log(`skill: ${skill.name}`);
 
       const liEl = document.createElement("li");
-      liEl.classList.add("skills__item");
+      liEl.classList.add("c-skills__item");
       const titleEl = document.createElement("h4");
-      titleEl.classList.add("skills__itemTitle");
+      titleEl.classList.add("c-skills__itemTitle");
       const dlEl = document.createElement("dl");
-      dlEl.classList.add("skills__years");
+      dlEl.classList.add("c-skills__years");
       const dtEl = document.createElement("dt");
       dtEl.classList.add("__title");
       dtEl.textContent = "経験年数";
@@ -51,7 +51,7 @@ export const Skills = () => {
 
       // タイトル
       titleEl.innerHTML = skill.learning
-        ? `${skill.name}<span class="skills__smallTitle">（学習中）</span>`
+        ? `${skill.name}<span class="c-skills__smallTitle">（学習中）</span>`
         : skill.name;
       liEl.appendChild(titleEl);
 

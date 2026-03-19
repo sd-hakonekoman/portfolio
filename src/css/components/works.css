@@ -1,4 +1,4 @@
-.works {
+.c-works {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   grid-gap: 1rem;
@@ -7,7 +7,7 @@
   list-style-type: none;
 }
 
-.works__item {
+.c-works__item {
   padding: 10px;
   border: 1px solid #000;
   border-radius: 5px;
@@ -37,7 +37,7 @@
   }
 }
 
-.works__item__description {
+.c-works__item__description {
   margin-block-start: 1em;
 
   &::before {

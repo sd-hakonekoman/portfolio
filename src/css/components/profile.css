@@ -1,13 +1,14 @@
-.profile__list {
+.c-profile__list {
   > li + li {
-    margin-block-start: 1em;
+    --mt: 1em;
+    margin-block-start: var(--mt);
   }
 }
 
 @media (--pc) {
-  .profile__list {
+  .c-profile__list {
     > li + li {
-      margin-block-start: 0.5em;
+      --mt: 0.5em;
     }
   }
 }
