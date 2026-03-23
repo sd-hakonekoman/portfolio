@@ -626,6 +626,11 @@ a {
   padding-block: 5px;
   width: 100%;
   background-color: #fff;
+  transition: box-shadow 0.3s ease;
+
+  &.is-scrolled {
+    box-shadow: 0px 3px 4px -4px #777;
+  }
 }
 
 .c-header__list {
