@@ -7,17 +7,22 @@ export const Header = () => {
   };
 
   const headerEl = document.getElementById(`header`);
+  const mvEl = document.getElementById('mv');
   const headerAddClass = 'is-scrolled';
+
+  if (!headerEl || !mvEl) {
+    return;
+  }
 
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        headerEl?.classList.remove(headerAddClass);
+        headerEl.classList.remove(headerAddClass);
       } else {
-        headerEl?.classList.add(headerAddClass);
+        headerEl.classList.add(headerAddClass);
       }
     });
   }, options);
 
-  observer.observe(document.getElementById('mv')!);
+  observer.observe(mvEl);
 };
