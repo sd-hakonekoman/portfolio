@@ -61,7 +61,3 @@ Vite が提供する型定義を TypeScript に読み込ませるためのファ
    ```bash
    npm run build
    ```
-
-# ブランチ管理方法
-
-GitHub Flow
