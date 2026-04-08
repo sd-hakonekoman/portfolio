@@ -61,3 +61,18 @@ Vite が提供する型定義を TypeScript に読み込ませるためのファ
    ```bash
    npm run build
    ```
+
+# GitHub Actions
+
+GitHub Actions により、`main` ブランチへの `push` をトリガーに自動的に Github Pages サイト に対応内容が反映されるようになっています。
+
+## 詳細
+
+`main` ブランチへの `push` をトリガーに GitHub Actions が自動実行されます。
+
+- `npm ci` を実行します。
+- `npm run build` を実行します。
+- ビルド結果を artifact として引き渡します。
+- 生成された `docs` ディレクトリに差分がある場合のみ、自動でコミットして `main` に反映します。
+
+同じタイミングで `main` に連続して `push` が入った場合は、古い workflow run をキャンセルし、最新の run だけが `docs` を更新するようにしています。
