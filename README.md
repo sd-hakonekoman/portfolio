@@ -64,11 +64,14 @@ Vite が提供する型定義を TypeScript に読み込ませるためのファ
 
 # GitHub Actions
 
-GitHub Actions により、`main` ブランチへの `push` をトリガーに自動的に Github Pages サイト に対応内容が反映されるようになっています。
+GitHub Actions により、基本的には `main` ブランチへの `push` をトリガーに自動的に GitHub Pages サイトに変更内容が反映されるようになっています。
+
+ただし、Actions 自身が行う `docs` 更新コミットの `push` については、各 job の `if: github.actor != 'github-actions[bot]'` により実行されません（無限ループ防止）。
 
 ## 詳細
 
-`main` ブランチへの `push` をトリガーに GitHub Actions が自動実行されます。
+`main` ブランチへの `push` をトリガーに GitHub Actions が自動実行されます。  
+ただし、`github-actions[bot]` による `push` は各 job の条件で除外されるため、Actions が自動コミットした `docs` 更新をきっかけに再実行されることはありません。
 
 - `npm ci` を実行します。
 - `npm run build` を実行します。
