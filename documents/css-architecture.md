@@ -6,11 +6,13 @@
 
 # フォルダ構成
 
+```
 css/
 ├──foundations/
 ├──layouts/
 ├──components/
 ├──utilities/
+```
 
 ## foundations
 
@@ -69,9 +71,9 @@ variables.css
 
 クラス名は **ケバブケース（kebab-case）** を使用します。
 
-.c-card  
-.c-card__title  
-.c-card__image
+.c-primary-card  
+.c-primary-card__title  
+.c-primary-card__top-image
 
 ## BEM構造
 
@@ -103,13 +105,13 @@ is-disabled
 
 CSSの詳細度は `@layer` を使用して制御します。
 
-例.
+例.  
 @layer foundations;  
 @layer layouts;  
 @layer components;  
 @layer utilities;
 
-基本的な優先順位  
+**基本的な優先順位**  
 foundations  
 layouts  
 components  
@@ -160,7 +162,7 @@ JavaScript用クラスには **CSSを定義しません**。
 
 <div class="c-modal js-modal"></div>
 
-命名例  
+**命名例**  
 .js-modal  
 .js-modal-open  
 .js-accordion  
