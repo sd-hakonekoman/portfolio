@@ -10,12 +10,13 @@
 /* layouts */
 @import "./layouts/container.css" layer(layouts);
 @import "./layouts/footer.css" layer(layouts);
+@import "./layouts/card-list.css" layer(layouts);
 
 /* components */
 @import "./components/section.css" layer(components);
 @import "./components/definitionList.css" layer(components);
 @import "./components/skills.css" layer(components);
-@import "./components/works.css" layer(components);
+@import "./components/work.css" layer(components);
 @import "./components/mv.css" layer(components);
 @import "./components/header.css" layer(components);
 @import "./components/profile.css" layer(components);

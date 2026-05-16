@@ -27,7 +27,7 @@ export const Skills = () => {
 
     // ul作成
     const ulEl = document.createElement("ul");
-    ulEl.classList.add("c-skills__list");
+    ulEl.classList.add("l-card-list");
     skillListEl.appendChild(ulEl);
 
     for (const skill of SKILLS[key].list) {
