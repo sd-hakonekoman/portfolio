@@ -578,10 +578,6 @@ a {
       -moz-column-gap: 0.5em;
            column-gap: 0.5em;
       margin-inline-start: 0;
-
-      > span {
-        white-space: nowrap;
-      }
     }
   }
 }
