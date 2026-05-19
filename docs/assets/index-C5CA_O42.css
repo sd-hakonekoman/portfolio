@@ -387,7 +387,6 @@ html {
   scroll-behavior: smooth;
   scroll-padding-top: 60px;
   overflow-wrap: anywhere;
-  word-break: auto-phrase; /* 文節での改行。Chrome、Edgeのみ。 */
 }
 
 body {
