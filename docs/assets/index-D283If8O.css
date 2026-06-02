@@ -597,7 +597,8 @@ a {
 .c-mv {
   background-color: rgb(var(--color-black) / 0.05);
   border-radius: 20px;
-  padding: 30px;
+  padding-block: 30px;
+  padding-inline: 20px;
 
   > :last-child {
     margin-block-end: 0;
@@ -605,6 +606,8 @@ a {
 }
 
 .c-mv__title {
+  display: flex;
+  flex-wrap: wrap;
   margin-block-start: 0;
 }
 }@layer components{
@@ -695,6 +698,9 @@ a {
 }@media (width >= 768px){
   :root {
     --px-page: 30px;
+  }
+  .c-mv {
+    padding-inline: 30px;
   }
   .c-header {
     padding-block: 10px;
