@@ -1,24 +1,7 @@
 /**
  * スキルセットのデータ
  */
-type Skill = {
-  name: string;
-  years?: number | string; // 経験年数、1年未満の場合は文字列で記載、未経験の場合は記載しない
-  description?: string;
-  learning?: boolean; // 学習中の場合はtrue
-};
-
-type SkillCategory = {
-  title: string; // スキルのカテゴリー名
-  description?: string; // スキルのカテゴリーの説明
-  list: Skill[];
-};
-
-type Skills = {
-  [key: string]: SkillCategory;
-};
-
-export const SKILLS: Skills = {
+export const SKILLS = {
   html: {
     title: "HTML関連",
     list: [

@@ -1,4 +1,4 @@
-import { MEDIA_QUERY_PC } from "../constants/mediaQuery";
+import { MEDIA_QUERY_PC } from "../constants/mediaQuery.js";
 
 const mediaQueryList = window.matchMedia(`(width >= ${MEDIA_QUERY_PC}px)`);
 

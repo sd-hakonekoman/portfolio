@@ -7,22 +7,10 @@
 - Vite
 - HTML
 - CSS
-- TypeScript
+- JavaScript
 
 ## CSS
 [CSS設計](./documents/css-architecture.md)
-
-## TypeScript
-
-### src/vite-env.d.ts
-
-Vite が提供する型定義を TypeScript に読み込ませるためのファイルです。
-
-- import.meta.env の型定義を有効にします。
-- CSS や画像などのアセット import に関する型定義を有効にします。
-- Vite + TypeScript の構成では通常必要です。
-
-このプロジェクトでは TypeScript から CSS を import しているため、不要と判断できるまでは削除しない前提とします。
 
 # ディレクトリ構成
 
