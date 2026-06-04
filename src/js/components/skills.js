@@ -1,4 +1,4 @@
-import { SKILLS } from "../constants/skills";
+import { SKILLS } from "../constants/skills.js";
 
 export const Skills = () => {
   const skillListEl = document.getElementById("skillList");
