@@ -63,18 +63,34 @@ export const SKILLS = {
       //     "参考書などで学習中です。<br>型定義を意識した実装を心がけ、より安全で保守性の高いコードを書くことを目指しています。",
       //   learning: true,
       // },
-    ],
-  },
-  framework: {
-    // ライブラリとフレームワーク
-    title: " ライブラリ・フレームワーク",
-    list: [
       {
         name: "jQuery",
         years: 9,
         description:
           "Webサイトの実装で使用していますが、現在はJavaScriptで完結させることが多いです。",
       },
+    ],
+  },
+  cms: {
+    title: "CMS",
+    list: [
+      {
+        name: "WordPress",
+        years: 6,
+        description:
+          "オリジナルテーマの制作から既存サイトの改修・運用まで対応可能です。",
+      },
+      // {
+      //   name: "microCMS",
+      //   description: "参考書で学習中です。",
+      //   learning: true,
+      // },
+    ],
+  },
+  framework: {
+    // ライブラリとフレームワーク
+    title: " ライブラリ・フレームワーク",
+    list: [
       {
         name: "Astro",
         years: "2ヶ月",
@@ -101,22 +117,6 @@ export const SKILLS = {
         years: "2ヶ月",
         description: "LP制作で使用した経験があります。<br>既存LPの改修対応、既存LPを流用した新規LPの制作を行いました。",
       },
-    ],
-  },
-  cms: {
-    title: "CMS",
-    list: [
-      {
-        name: "WordPress",
-        years: 6,
-        description:
-          "オリジナルテーマの制作が可能です。<br>ただしブロックテーマでの実装経験はありません。<br>近年は修正対応がメインで、オリジナルテーマの新規制作は2年ほどブランクがあります。",
-      },
-      // {
-      //   name: "microCMS",
-      //   description: "参考書で学習中です。",
-      //   learning: true,
-      // },
     ],
   },
   tools: {
