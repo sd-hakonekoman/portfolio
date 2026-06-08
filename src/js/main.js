@@ -1,4 +1,4 @@
-import "../css/style.css";
+import "../scss/style.scss";
 import { LinkIcon } from "./components/linkIcon.js";
 import { Menu } from "./components/menu.js";
 import { Skills } from "./components/skills.js";

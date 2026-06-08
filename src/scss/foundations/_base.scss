@@ -1,5 +1,3 @@
-@charset "UTF-8";
-
 /* リセットCSSに付け加える用のベーススタイル
    ========================================================================== */
 
@@ -28,7 +26,7 @@ body {
   font-smoothing: antialiased;
   */
 
-  /* プロポーショナルメトリクスを有効にする指定(日本語フォントの自動カーニング) 
+  /* プロポーショナルメトリクスを有効にする指定(日本語フォントの自動カーニング)
   ※ Safariはpaltが効かないかもしれない */
   font-feature-settings: "palt" 1;
 }
@@ -38,6 +36,14 @@ p {
 }
 
 a {
+  @media (--hover) {
+    transition: opacity 0.2s;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
   &[target="_blank"] > svg {
     vertical-align: baseline;
     margin-inline-start: 0.2rem;
@@ -45,12 +51,3 @@ a {
   }
 }
 
-@media (--hover) {
-  a {
-    transition: opacity 0.2s;
-
-    &:hover {
-      opacity: 0.8;
-    }
-  }
-}

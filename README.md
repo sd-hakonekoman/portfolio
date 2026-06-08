@@ -6,7 +6,7 @@
 
 - Vite
 - HTML
-- CSS
+- SCSS
 - JavaScript
 
 ## CSS

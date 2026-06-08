@@ -1,28 +1,90 @@
 # CSS設計
 
-このプロジェクトのCSSは **BEM** と **FLOCSS** を参考にした独自ルールで設計しています。
+このプロジェクトのスタイルは **SCSS** で管理しています。設計方針は **BEM** と **FLOCSS** を参考にした独自ルールです。
 
 ---
 
 # フォルダ構成
 
 ```
-css/
+src/scss/
+├──style.scss
 ├──foundations/
+│  ├──_.scss
+│  ├──_base.scss
+│  ├──_constants.scss
+│  ├──_inert.scss
+│  ├──_mediaQuery.scss
+│  └──_sanitize.scss
 ├──layouts/
+│  ├──_.scss
+│  ├──_card-list.scss
+│  ├──_container.scss
+│  └──_footer.scss
 ├──components/
-├──utilities/
+│  ├──_.scss
+│  ├──_definitionList.scss
+│  ├──_header.scss
+│  ├──_list.scss
+│  ├──_mv.scss
+│  ├──_profile.scss
+│  ├──_section.scss
+│  ├──_skills.scss
+│  └──_work.scss
+└──utilities/
+   ├──_.scss
+   └──_utilities.scss
 ```
+
+`style.scss` がスタイルのエントリーポイントです。  
+各ディレクトリの `_.scss` は barrel ファイルとして扱い、`@forward` で同階層のパーシャルを束ねます。  
+`style.scss` からは各 `_.scss` を `@use` して読み込みます。
+
+# SCSSの構成ルール
+
+## パーシャルファイル
+
+- スタイルは `_` で始まる SCSS パーシャルに分割します
+- 1ファイル1責務を基本とします
+- ディレクトリ単位の公開入口は `_.scss` とします
+
+例.  
+`components/_header.scss`  
+`components/_skills.scss`  
+`layouts/_container.scss`
+
+## `_.scss` の役割
+
+各ディレクトリの `_.scss` では、そのディレクトリ内のパーシャルを `@forward` で公開します。
+
+例.
+```scss
+@forward "header";
+@forward "skills";
+```
+
+## `style.scss` の役割
+
+`src/scss/style.scss` では、各ディレクトリの `_.scss` を `@use` して全体の読み込み順を管理します。
+
+例.
+```scss
+@use "./foundations/_" as *;
+@use "./layouts/_" as *;
+@use "./components/_" as *;
+@use "./utilities/_" as *;
+```
+
+読み込み順は `style.scss` の `@use` 順に依存します。
 
 ## foundations
 
-リセット、ベーススタイル、カスタムプロパティなど  
-サイト全体の基礎となるスタイルを定義します。
+リセット、ベーススタイル、カスタムプロパティ、メディアクエリ定義など、サイト全体の基礎となるスタイルを定義します。
 
 例.  
-reset.css  
-base.css  
-variables.css
+`_sanitize.scss`  
+`_base.scss`  
+`_constants.scss`
 
 ## layouts
 
@@ -31,9 +93,8 @@ variables.css
 
 例.  
 .l-container  
-.l-header  
-.l-main  
-.l-footer
+.l-footer  
+.l-card-list
 
 ## components
 
@@ -41,29 +102,23 @@ variables.css
 コンポーネント用クラスには `.c-` プレフィックスを使用します。
 
 例.  
-.c-button  
-.c-card  
-.c-modal  
-.c-nav
+.c-header  
+.c-section  
+.c-work  
+.c-skills__item
 
 ## utilities
 
 単一の役割のみを持つユーティリティクラスを定義します。  
 ユーティリティ用クラスには `.u-` プレフィックスを使用します。
 
-プレフィックス以降のクラス名は **Tailwind CSS と同様の命名規則**を参考にします。
+プレフィックス以降のクラス名は **Tailwind CSS と同様の命名規則** を参考にします。
 
 必要に応じて `!important` を使用します。
 
 例.  
-.u-text-center  
-.u-font-bold  
 .u-hidden  
-.u-flex  
-.u-items-center  
-.u-justify-between  
-.u-mt-16  
-.u-px-8
+.u-overscroll-y-none
 
 # クラス命名規則
 
@@ -79,8 +134,8 @@ variables.css
 
 BEMの概念をベースに命名します。
 
-Block
-Block__Element
+Block  
+Block__Element  
 Block--Modifier
 
 例.  
@@ -101,28 +156,12 @@ is-disabled
 .c-accordion.is-open  
 .c-tab.is-active
 
-# 詳細度（specificity）
-
-CSSの詳細度は `@layer` を使用して制御します。
-
-例.  
-@layer foundations;  
-@layer layouts;  
-@layer components;  
-@layer utilities;
-
-**基本的な優先順位**  
-foundations  
-layouts  
-components  
-utilities
-
 # カスタムプロパティ
 
-カスタムプロパティは `foundations` レイヤーで管理します。
+カスタムプロパティは `foundations` 配下で管理します。
 
 例.  
-```
+```scss
 :root {
   --color-primary: #0055ff;
   --space-md: 16px;
@@ -131,15 +170,13 @@ utilities
 
 # Focus style
 
-フォーカス表示はアクセシビリティ確保のため  
-`foundations` レイヤーでグローバルに定義します。
-
-:focus-visible
+フォーカス表示はアクセシビリティ確保のため、グローバルに定義します。  
+定義場所は `foundations` 配下とします。
 
 例.  
-```
+```scss
 :focus-visible {
-  outline: 2px solid var(–-color-focus);
+  outline: 2px solid var(--color-focus);
   outline-offset: 2px;
 }
 ```
@@ -152,15 +189,14 @@ JavaScript用クラスには **CSSを定義しません**。
 
 これにより、スタイルと挙動の責務を分離します。
 
-例.
-```
+例.  
+```html
 <button class="c-button js-modal-open">
   モーダルを開く
 </button>
-```
-
 
 <div class="c-modal js-modal"></div>
+```
 
 **命名例**  
 .js-modal  
@@ -169,14 +205,15 @@ JavaScript用クラスには **CSSを定義しません**。
 .js-tab  
 .js-toggle
 
-JavaScriptで要素を取得する場合は js- クラスを使用します。
+JavaScriptで要素を取得する場合は `js-` クラスを使用します。
 
 例.  
-```
-document.querySelector('.js-modal')
+```js
+document.querySelector(".js-modal");
 ```
 
-⸻
+---
 
 # 現在の課題
+
 - カスタムプロパティの命名規則が決まっていない
