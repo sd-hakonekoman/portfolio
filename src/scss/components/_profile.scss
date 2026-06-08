@@ -2,12 +2,8 @@
   > li + li {
     --mt: 1em;
     margin-block-start: var(--mt);
-  }
-}
 
-@media (--pc) {
-  .c-profile__list {
-    > li + li {
+    @media (--pc) {
       --mt: 0.5em;
     }
   }

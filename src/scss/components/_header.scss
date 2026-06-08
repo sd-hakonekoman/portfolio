@@ -6,6 +6,10 @@
   width: 100%;
   background-color: #fff;
   transition: box-shadow 0.3s ease;
+  
+  @media (--pc) {
+    padding-block: 10px;
+  }
 
   &.is-scrolled {
     box-shadow: 0px 3px 4px -4px #777;
@@ -19,6 +23,15 @@
   margin-block: 0;
   font-size: 20px;
   text-align: center;
+
+  @media (--pc) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: none;
+    font-size: 18px;
+    gap: 30px;
+  }
 }
 
 .c-header__button {
@@ -29,10 +42,33 @@
   padding: 0;
   appearance: none;
 
+  @media (--max-pc) {
+    display: block;
+    width: 30px;
+    aspect-ratio: 1;
+    margin-inline: auto 10px;
+    padding: 6px;
+    box-sizing: content-box;
+  }
+
   img {
     width: 100%;
     height: 100%;
     object-fit: contain;
+  }
+}
+
+.c-header__nav {
+  @media (--max-pc) {
+    position: absolute;
+    background-color: #fff;
+    width: 100%;
+    padding: 20px;
+
+    // メニューが閉じている
+    .c-header__button[aria-expanded="false"] + & {
+      display: none;
+    }
   }
 }
 
@@ -47,52 +83,14 @@
   justify-content: center;
   padding: 4px;
 
+  @media (--pc) {
+    --icon-size: 24px;
+    padding: 0;
+  }
+
   > img {
     width: var(--icon-size);
     height: auto;
     aspect-ratio: 1;
-  }
-}
-
-@media (--pc) {
-  .c-header {
-    padding-block: 10px;
-  }
-
-  .c-header__list {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    grid-template-columns: none;
-    font-size: 18px;
-    gap: 30px;
-  }
-
-  .c-header__repoLink {
-    --icon-size: 24px;
-    padding: 0;
-  }
-}
-
-@media (--max-pc) {
-  .c-header__button {
-    display: block;
-    width: 30px;
-    aspect-ratio: 1;
-    margin-inline: auto 10px;
-    padding: 6px;
-    box-sizing: content-box;
-
-    /* メニューが閉じている */
-    &[aria-expanded="false"] + .c-header__nav {
-      display: none;
-    }
-  }
-
-  .c-header__nav {
-    position: absolute;
-    background-color: #fff;
-    width: 100%;
-    padding: 20px;
   }
 }

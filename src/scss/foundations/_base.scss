@@ -36,6 +36,14 @@ p {
 }
 
 a {
+  @media (--hover) {
+    transition: opacity 0.2s;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
   &[target="_blank"] > svg {
     vertical-align: baseline;
     margin-inline-start: 0.2rem;
@@ -43,12 +51,3 @@ a {
   }
 }
 
-@media (--hover) {
-  a {
-    transition: opacity 0.2s;
-
-    &:hover {
-      opacity: 0.8;
-    }
-  }
-}

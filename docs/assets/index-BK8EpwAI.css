@@ -357,12 +357,12 @@ body {
 p {
   line-height: 1.8;
 }
-
 a[target=_blank] > svg {
   vertical-align: baseline;
   margin-inline-start: 0.2rem;
   width: 0.8em;
 }
+
 *[inert] {
   filter: blur(4px);
 }
@@ -394,6 +394,7 @@ a[target=_blank] > svg {
   /* 間隔 */
   --px-page: 14px;
 }
+
 .l-container {
   margin-inline: auto;
   width: min(100% - var(--px-page) * 2, 1200px);
@@ -518,6 +519,7 @@ a[target=_blank] > svg {
   margin-block-start: 0.5em;
   font-size: 0.9rem;
 }
+
 .c-mv {
   background-color: rgb(var(--color-black)/0.05);
   border-radius: 20px;
@@ -533,6 +535,7 @@ a[target=_blank] > svg {
   flex-wrap: wrap;
   margin-block-start: 0;
 }
+
 .c-header {
   position: sticky;
   z-index: 1;
@@ -588,13 +591,16 @@ a[target=_blank] > svg {
   height: auto;
   aspect-ratio: 1;
 }
+
 .c-profile__list > li + li {
   --mt: 1em;
   margin-block-start: var(--mt);
 }
+
 .c-list__item:not(:first-child) {
   margin-top: 0.5em;
 }
+
 /* display */
 .u-hidden {
   display: none;
@@ -641,16 +647,15 @@ a[target=_blank] > svg {
     margin-inline: auto 10px;
     padding: 6px;
     box-sizing: content-box;
-    /* メニューが閉じている */
-  }
-  .c-header__button[aria-expanded=false] + .c-header__nav {
-    display: none;
   }
   .c-header__nav {
     position: absolute;
     background-color: #fff;
     width: 100%;
     padding: 20px;
+  }
+  .c-header__button[aria-expanded=false] + .c-header__nav {
+    display: none;
   }
   .c-list {
     padding-inline-start: 1em;

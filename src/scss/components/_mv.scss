@@ -4,6 +4,10 @@
   padding-block: 30px;
   padding-inline: 20px;
 
+  @media (--pc) {
+    padding-inline: 30px;
+  }
+
   > :last-child {
     margin-block-end: 0;
   }
@@ -13,10 +17,4 @@
   display: flex;
   flex-wrap: wrap;
   margin-block-start: 0;
-}
-
-@media (--pc) {
-  .c-mv {
-    padding-inline: 30px;
-  }
 }

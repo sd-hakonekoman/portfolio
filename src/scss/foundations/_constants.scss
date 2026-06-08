@@ -28,10 +28,8 @@
 
   /* 間隔 */
   --px-page: 14px;
-}
 
-@media (--pc) {
-  :root {
+  @media (--pc) {
     --px-page: 30px;
   }
 }

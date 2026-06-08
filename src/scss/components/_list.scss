@@ -1,11 +1,11 @@
-.c-list__item {
-  &:not(:first-child) {
-    margin-top: 0.5em;
+.c-list {
+  @media (--max-pc) {
+    padding-inline-start: 1em;
   }
 }
 
-@media (--max-pc) {
-  .c-list {
-    padding-inline-start: 1em;
+.c-list__item {
+  &:not(:first-child) {
+    margin-top: 0.5em;
   }
 }
