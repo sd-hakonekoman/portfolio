@@ -89,7 +89,7 @@ export const skills = [
   },
   {
     // ライブラリとフレームワーク
-    title: " ライブラリ・フレームワーク",
+    title: "ライブラリ・フレームワーク",
     list: [
       {
         name: "Astro",

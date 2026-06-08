@@ -25,6 +25,14 @@ import { works } from "../data/works.js";
             ))}
           </dd>
         </dl>
+        <dl>
+          <dt>使用技術</dt>
+          <dd>
+            {work.technologies.map((tech, index) => (
+              <span>{tech}{index < work.technologies.length - 1 && "、"}</span>
+            ))}
+          </dd>
+        </dl>
         <div class="c-work__description">
           <p set:html={work.description}></p>
           {work.note && <p class="c-work__note" set:html={work.note}></p>}
