@@ -4,7 +4,7 @@
 
 # 使用技術
 
-- Vite
+- Astro
 - HTML
 - SCSS
 - JavaScript
@@ -44,11 +44,25 @@
    npm ci
    ```
 
-5. ビルド確認を行います。
+5. 開発サーバーを起動します。
+
+   ```bash
+   npm run dev
+   ```
+
+6. ビルド確認を行います。
 
    ```bash
    npm run build
    ```
+
+   ビルド結果は `docs` に出力されます。
+
+# Astro移行の開始地点
+
+- Astro のページエントリは `src/pages/index.astro` です。
+- 既存のHTMLは `src/index.html` に残してあるため、参照しながら移行できます。
+- 静的アセットは `src/public` のまま利用できます。
 
 # GitHub Actions
 
