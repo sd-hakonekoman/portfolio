@@ -1,6 +1,6 @@
 # 概要
 
-ポートフォリオサイトです。
+Astro で構築しているポートフォリオサイトです。
 
 # 使用技術
 
@@ -8,13 +8,23 @@
 - HTML
 - SCSS
 - JavaScript
+- PostCSS
 
 ## CSS
 [CSS設計](./documents/css-architecture.md)
 
 # ディレクトリ構成
 
-いずれ書く。
+```text
+src/
+├─ assets/
+│  ├─ js/        # フロントエンド用のJavaScript
+│  └─ scss/      # スタイル
+├─ components/   # Astroコンポーネント
+├─ data/         # 表示用データ
+├─ pages/        # ページエントリ
+└─ public/       # 静的アセット
+```
 
 # 環境構築の手順
 
@@ -58,11 +68,19 @@
 
    ビルド結果は `docs` に出力されます。
 
-# Astro移行の開始地点
+# 開発時の主な参照先
 
-- Astro のページエントリは `src/pages/index.astro` です。
-- 既存のHTMLは `src/index.html` に残してあるため、参照しながら移行できます。
-- 静的アセットは `src/public` のまま利用できます。
+- ページエントリは `src/pages/index.astro` です。
+- 各セクションは `src/components` 配下の Astro コンポーネントで管理しています。
+- 表示用データは `src/data` 配下で管理しています。
+- JavaScript と SCSS は `src/assets` 配下で管理しています。
+- 画像などの静的アセットは `src/public` 配下に配置しています。
+
+# npm scripts
+
+- `npm run dev`: 開発サーバーを起動します。
+- `npm run build`: 本番用にビルドし、`docs` を更新します。
+- `npm run preview`: ビルド済みファイルをローカルで確認します。
 
 # GitHub Actions
 
