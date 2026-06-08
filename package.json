@@ -11,6 +11,9 @@
     "build": "astro build",
     "preview": "astro preview --host"
   },
+  "overrides": {
+    "vite": "^7.3.5"
+  },
   "devDependencies": {
     "astro": "^6.4.4",
     "autoprefixer": "^10.5.0",
