@@ -1,4 +1,12 @@
 ---
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import Mv from "../components/Mv.astro";
+import Works from "../components/Works.astro";
+import ProcessQuality from "../components/ProcessQuality.astro";
+import Skills from "../components/Skills.astro";
+import Career from "../components/Career.astro";
+import Profile from "../components/Profile.astro";
 import "../scss/style.scss";
 ---
 
@@ -6,21 +14,24 @@ import "../scss/style.scss";
 <html lang="ja">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
     <meta name="generator" content={Astro.generator} />
-    <title>Portfolio</title>
+    <title>あべゆうたのポートフォリオ | Webコーダー</title>
   </head>
   <body>
+    <Header />
     <main class="l-container">
-      <section class="c-section">
-        <h1 class="c-section__primaryTitle">Astro Environment Ready</h1>
-        <p>
-          `src/index.html` の内容を `src/pages/index.astro` へ移植してください。
-        </p>
-        <p>
-          静的アセットは `src/public`、スタイルは `src/scss` をそのまま利用できます。
-        </p>
-      </section>
+      <Mv />
+      <Works />
+      <ProcessQuality />
+      <Skills />
+      <Career />
+      <Profile />
     </main>
+    <Footer />
+    <script>
+      import '../js/main.js';
+    </script>
   </body>
 </html>
