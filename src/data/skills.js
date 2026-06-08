@@ -1,8 +1,8 @@
 /**
  * スキルセットのデータ
  */
-export const SKILLS = {
-  html: {
+export const skills = [
+  {
     title: "HTML関連",
     list: [
       {
@@ -19,7 +19,7 @@ export const SKILLS = {
       },
     ],
   },
-  css: {
+  {
     title: "CSS関連",
     list: [
       {
@@ -48,7 +48,7 @@ export const SKILLS = {
       },
     ],
   },
-  js: {
+  {
     title: "JavaScript関連",
     list: [
       {
@@ -71,7 +71,7 @@ export const SKILLS = {
       },
     ],
   },
-  cms: {
+  {
     title: "CMS",
     list: [
       {
@@ -87,9 +87,9 @@ export const SKILLS = {
       // },
     ],
   },
-  framework: {
+  {
     // ライブラリとフレームワーク
-    title: " ライブラリ・フレームワーク",
+    title: "ライブラリ・フレームワーク",
     list: [
       {
         name: "Astro",
@@ -119,7 +119,7 @@ export const SKILLS = {
       },
     ],
   },
-  tools: {
+  {
     title: "ツール",
     list: [
       {
@@ -147,7 +147,7 @@ export const SKILLS = {
       },
     ],
   },
-  designTools: {
+  {
     title: "デザインツール",
     description:
       "デザインデータからコーディングをするために使用。メインに使用していたのはFigmaとXDです。",
@@ -171,7 +171,7 @@ export const SKILLS = {
       },
     ],
   },
-  communicationAndTaskManagementTools: {
+  {
     title: "業務コミュニケーション / タスク管理ツール",
     list: [
       {
@@ -196,4 +196,4 @@ export const SKILLS = {
       },
     ],
   },
-};
+];

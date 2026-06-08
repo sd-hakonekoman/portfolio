@@ -1,0 +1,35 @@
+---
+import { skills } from "../data/skills.js";
+---
+<section class="c-section" id="skills">
+  <h2 class="c-section__primaryTitle">スキルセット</h2>
+  <p>
+    スキルセットを項目毎に記載しています。<br>学習中で実務未経験の項目には（学習中）と記載しています。
+  </p>
+  <div>
+    {skills.map((skill) => (
+      <>
+        <h3 class="c-skills__title">{skill.title}</h3>
+        {skill.description && <p set:html={skill.description}></p>}
+        <ul class="l-card-list">
+          {skill.list.map((item) => (
+            <li class="c-skills__item">
+              <h4 class="c-skills__itemTitle">{item.name}{'learning' in item && item.learning && <span class="c-skills__smallTitle">（学習中）</span>}</h4>
+              {'years' in item && item.years && (
+                <dl class="c-skills__years">
+                  <dt class="__title">経験年数</dt>
+                  <dd class="__year">
+                    {typeof item.years === 'number'
+                    ? `${item.years}年`
+                    : item.years}
+                  </dd>
+                </dl>
+              )}
+              {item.description && <p set:html={item.description}></p>}
+            </li>
+          ))}
+        </ul>
+      </>
+    ))}
+  </div>
+</section>

@@ -1,0 +1,43 @@
+---
+import { works } from "../data/works.js";
+---
+<section class="c-section" id="works">
+  <h2 class="c-section__primaryTitle">制作実績</h2>
+  <p>
+    前職で携わったWebサイトの一例です。<br>記載のURLは前職のコーポレートサイトの実績ページとなっており、そこから実際のサイトを見ることができます。
+  </p>
+  <ul class="l-card-list l-card-list--works">
+    {works.map((work) => (
+      <li class="c-work">
+        <h3>{work.title}</h3>
+        <a
+          href={work.link}
+          target="_blank"
+          rel="noreferrer"
+        >
+          {work.link}
+        </a>
+        <dl>
+          <dt>担当</dt>
+          <dd>
+            {work.roles.map((role, index) => (
+              <span>{role}{index < work.roles.length - 1 && "、"}</span>
+            ))}
+          </dd>
+        </dl>
+        <dl>
+          <dt>使用技術</dt>
+          <dd>
+            {work.technologies.map((tech, index) => (
+              <span>{tech}{index < work.technologies.length - 1 && "、"}</span>
+            ))}
+          </dd>
+        </dl>
+        <div class="c-work__description">
+          <p set:html={work.description}></p>
+          {work.note && <p class="c-work__note" set:html={work.note}></p>}
+        </div>
+      </li>
+    ))}
+  </ul>
+</section>
