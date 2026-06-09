@@ -4,7 +4,7 @@ export default defineConfig({
   site: "https://sd-hakonekoman.github.io",
   base: "/portfolio/",
   srcDir: "./src",
-  publicDir: "./src/public",
+  publicDir: "./public",
   outDir: "./docs",
   vite: {
     build: {
