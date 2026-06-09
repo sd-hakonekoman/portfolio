@@ -82,10 +82,10 @@ jobs:
         id: docs-changes
         if: steps.current-run.outputs.is_current == 'true'
         run: |
-          if git diff --quiet -- docs; then
-            echo "changed=false" >> "$GITHUB_OUTPUT"
-          else
+          if [ -n "$(git status --porcelain=v1 --untracked-files=all -- docs)" ]; then
             echo "changed=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=false" >> "$GITHUB_OUTPUT"
           fi
 
       - name: Commit updated docs
