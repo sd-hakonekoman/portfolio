@@ -2,6 +2,9 @@
    ========================================================================== */
 
 :root {
+  /* Font Size */
+  --text-base: 1rem;
+
   /* Font Weight */
   --font-thin: 100; /* Thin (Hairline) */
   --font-extra-light: 200; /* Extra Light (Ultra Light) */
@@ -21,6 +24,9 @@
     "Hiragino Sans",
     "Noto Sans JP",
     sans-serif;
+
+  /* letter-spacing */
+  --tracking-base: 0.05em;
 
   /* Color */
   --color-black: 8 19 26;
