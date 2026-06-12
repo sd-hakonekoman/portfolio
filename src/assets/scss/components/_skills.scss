@@ -4,8 +4,9 @@
 
 .c-skills__item {
   padding: 10px;
-  border: 1px solid #000;
-  border-radius: 5px;
+  border: 1px solid var(--card-border-color);
+  border-radius: var(--rounded-card);
+  background-color: var(--card-background);
 
   > *:not(h3) {
     margin-inline-start: 1em;

@@ -20,7 +20,7 @@
 
 :where(body) {
   font-family: var(--font-gothic);
-  color: var(--color-black-rgb);
+  color: var(--color-text-base);
   font-size: var(--text-base);
   letter-spacing: var(--tracking-base);
 
@@ -41,6 +41,8 @@
 }
 
 :where(a) {
+  text-underline-offset: calc(3 / 16 * 1rem);
+
   @media (--hover) {
     transition: opacity 0.2s;
 

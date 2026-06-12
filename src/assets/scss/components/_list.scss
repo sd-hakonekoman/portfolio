@@ -1,11 +1,10 @@
 .c-list {
+  list-style-type: revert;
   @media (--max-pc) {
     padding-inline-start: 1em;
   }
-}
 
-.c-list__item {
-  &:not(:first-child) {
+  > li:not(:first-child) {
     margin-top: 0.5em;
   }
 }
