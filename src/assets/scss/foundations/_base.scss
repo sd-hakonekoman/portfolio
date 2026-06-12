@@ -6,18 +6,23 @@
   min-inline-size: 0;
 }
 
-html {
+:where(:root) {
+  overflow-wrap: anywhere;
+  scrollbar-gutter: stable; /* スクロールバーのスペースを常に確保してレイアウトのズレを防止 */
+}
+
+:where(html) {
   cursor: auto;
   scroll-behavior: smooth;
   scroll-padding-top: 60px;
   overflow-wrap: anywhere;
 }
 
-body {
+:where(body) {
   font-family: var(--font-gothic);
-  color: var(--color-black-rgb);
-  font-size: 1rem;
-  letter-spacing: 0.05em;
+  color: var(--color-text-base);
+  font-size: var(--text-base);
+  letter-spacing: var(--tracking-base);
 
   /* 【注意】：antialiased を設定するとスッキリとした見た目にはなるものの、文字の印象が弱めになり、背景色とのコントラスト等により見難くなる場合がある。 */
   /*
@@ -28,14 +33,16 @@ body {
 
   /* プロポーショナルメトリクスを有効にする指定(日本語フォントの自動カーニング)
   ※ Safariはpaltが効かないかもしれない */
-  font-feature-settings: "palt" 1;
+  // font-feature-settings: "palt" 1;
 }
 
-p {
-  line-height: 1.8;
+:where(p) {
+  line-height: 1.7;
 }
 
-a {
+:where(a) {
+  text-underline-offset: calc(3 / 16 * 1rem);
+
   @media (--hover) {
     transition: opacity 0.2s;
 
@@ -51,3 +58,8 @@ a {
   }
 }
 
+:where(ol, ul) {
+  // `list-style-type: ""`は、アクセシビリティに影響を与えずにマーカーを非表示にするために使用
+  // @see https://matuzo.at/blog/2023/removing-list-styles-without-affecting-semantics
+  list-style-type: "";
+}

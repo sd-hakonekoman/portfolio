@@ -89,7 +89,6 @@
  * Remove the list style on navigation lists in all browsers (opinionated).
  */
 :where(nav) :where(ol, ul) {
-  list-style-type: none;
   padding: 0;
 }
 
@@ -331,18 +330,23 @@
   min-inline-size: 0;
 }
 
-html {
+:where(:root) {
+  overflow-wrap: anywhere;
+  scrollbar-gutter: stable; /* スクロールバーのスペースを常に確保してレイアウトのズレを防止 */
+}
+
+:where(html) {
   cursor: auto;
   scroll-behavior: smooth;
   scroll-padding-top: 60px;
   overflow-wrap: anywhere;
 }
 
-body {
+:where(body) {
   font-family: var(--font-gothic);
-  color: var(--color-black-rgb);
-  font-size: 1rem;
-  letter-spacing: 0.05em;
+  color: var(--color-text-base);
+  font-size: var(--text-base);
+  letter-spacing: var(--tracking-base);
   /* 【注意】：antialiased を設定するとスッキリとした見た目にはなるものの、文字の印象が弱めになり、背景色とのコントラスト等により見難くなる場合がある。 */
   /*
   -webkit-font-smoothing: antialiased;
@@ -351,16 +355,23 @@ body {
   */
   /* プロポーショナルメトリクスを有効にする指定(日本語フォントの自動カーニング)
   ※ Safariはpaltが効かないかもしれない */
-  font-feature-settings: "palt" 1;
 }
 
-p {
-  line-height: 1.8;
+:where(p) {
+  line-height: 1.7;
 }
-a[target=_blank] > svg {
+
+:where(a) {
+  text-underline-offset: 0.1875rem;
+}
+:where(a)[target=_blank] > svg {
   vertical-align: baseline;
   margin-inline-start: 0.2rem;
   width: 0.8em;
+}
+
+:where(ol, ul) {
+  list-style-type: "";
 }
 
 *[inert] {
@@ -369,6 +380,10 @@ a[target=_blank] > svg {
 
 /* 定数
    ========================================================================== */
+:root {
+  /* Font Size */
+  --text-base: calc(14rem / 16);
+}
 :root {
   /* Font Weight */
   --font-thin: 100; /* Thin (Hairline) */
@@ -382,17 +397,31 @@ a[target=_blank] > svg {
   --font-black: 900; /* Black (Heavy) */
   /* Font Family */
   --font-gothic:
+    "Noto Sans JP",
     "Helvetica Neue",
     Arial,
     "Hiragino Kaku Gothic ProN",
     "Hiragino Sans",
-    "Noto Sans JP",
     sans-serif;
+  /* letter-spacing */
+  --tracking-base: 0.1em;
   /* Color */
-  --color-black: 8 19 26;
-  --color-black-rgb: rgb(var(--color-black));
+  --color-black-rgb: 8 19 26;
+  --color-black: rgb(var(--color-black-rgb));
+  --color-white-rgb: 255 255 255;
+  --color-white: rgb(var(--color-white-rgb));
+  --color-gray-1: #ebebeb;
+  --color-gray-2: #a2a9b1;
+  --card-border-color: var(--color-gray-1);
+  --card-background: var(--color-white-rgb);
+  --card-background: #fafafa;
+  --color-text-base: #333;
   /* 間隔 */
   --px-page: 14px;
+}
+:root {
+  /* border-radius */
+  --rounded-card: 16px;
 }
 
 .l-container {
@@ -402,7 +431,7 @@ a[target=_blank] > svg {
 
 .l-footer {
   margin-block-start: 80px;
-  border-top: 2px solid var(--color-black-rgb);
+  border-top: 2px solid var(--color-black);
   padding-block: 20px;
   text-align: center;
 }
@@ -427,15 +456,16 @@ a[target=_blank] > svg {
 
 .c-section__primaryTitle {
   padding-block-end: 0.3em;
-  border-bottom: 2px solid rgb(var(--color-black)/0.5);
+  padding-block-end: 0.25rem;
+  border-bottom: 1px solid var(--color-gray-2);
 }
 
-.c-definitionList > dt {
+.c-definition-list > dt {
   font-size: 1.17em;
   font-weight: bold;
   margin-block: 1.5em 1em;
 }
-.c-definitionList > dd {
+.c-definition-list > dd {
   margin-inline-start: 1em;
 }
 
@@ -445,8 +475,9 @@ a[target=_blank] > svg {
 
 .c-skills__item {
   padding: 10px;
-  border: 1px solid #000;
-  border-radius: 5px;
+  border: 1px solid var(--card-border-color);
+  border-radius: var(--rounded-card);
+  background-color: var(--card-background);
 }
 .c-skills__item > *:not(h3) {
   margin-inline-start: 1em;
@@ -486,8 +517,9 @@ a[target=_blank] > svg {
   grid-template-rows: subgrid;
   grid-row: span 5;
   padding: 10px;
-  border: 1px solid #000;
-  border-radius: 5px;
+  border: 1px solid var(--card-border-color);
+  border-radius: var(--rounded-card);
+  background-color: var(--card-background);
 }
 .c-work > * {
   margin-block: 0;
@@ -499,9 +531,11 @@ a[target=_blank] > svg {
 .c-work > dl > dd {
   display: flex;
   flex-wrap: wrap;
-  -moz-column-gap: 0.5em;
-       column-gap: 0.5em;
   margin-inline-start: 0;
+}
+
+.c-work__link {
+  font-size: 0.75rem;
 }
 
 .c-work__description::before {
@@ -518,13 +552,6 @@ a[target=_blank] > svg {
 .c-work__note {
   margin-block-start: 0.5em;
   font-size: 0.9rem;
-}
-
-.c-mv {
-  background-color: rgb(var(--color-black)/0.05);
-  border-radius: 20px;
-  padding-block: 30px;
-  padding-inline: 20px;
 }
 .c-mv > :last-child {
   margin-block-end: 0;
@@ -543,10 +570,10 @@ a[target=_blank] > svg {
   padding-block: 5px;
   width: 100%;
   background-color: #fff;
-  transition: box-shadow 0.3s ease;
+  transition: background-color 0.3s ease;
 }
 .c-header.is-scrolled {
-  box-shadow: 0px 3px 4px -4px #777;
+  background-color: rgb(var(--color-white-rgb)/0.95);
 }
 
 .c-header__list {
@@ -592,12 +619,18 @@ a[target=_blank] > svg {
   aspect-ratio: 1;
 }
 
+.c-profile__list {
+  list-style-type: revert;
+}
 .c-profile__list > li + li {
   --mt: 1em;
   margin-block-start: var(--mt);
 }
 
-.c-list__item:not(:first-child) {
+.c-list {
+  list-style-type: revert;
+}
+.c-list > li:not(:first-child) {
   margin-top: 0.5em;
 }
 
@@ -612,13 +645,19 @@ a[target=_blank] > svg {
 }
 @media (width >= 768px){
   :root {
+    --text-base: 1rem;
+  }
+  :root {
     --px-page: 30px;
   }
   .c-work {
     padding: 16px;
   }
+  .c-work__link {
+    font-size: 0.875rem;
+  }
   .c-mv {
-    padding-inline: 30px;
+    padding-block-start: 30px;
   }
   .c-header {
     padding-block: 10px;
@@ -640,6 +679,9 @@ a[target=_blank] > svg {
   }
 }
 @media not all and (width >= 768px){
+  .c-mv__title {
+    font-size: 1.625rem;
+  }
   .c-header__button {
     display: block;
     width: 30px;
@@ -662,10 +704,10 @@ a[target=_blank] > svg {
   }
 }
 @media (hover: hover) and (pointer: fine){
-  a {
+  :where(a) {
     transition: opacity 0.2s;
   }
-  a:hover {
+  :where(a):hover {
     opacity: 0.8;
   }
 }

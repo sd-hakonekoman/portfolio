@@ -5,14 +5,14 @@
   padding-block: 5px;
   width: 100%;
   background-color: #fff;
-  transition: box-shadow 0.3s ease;
+  transition: background-color 0.3s ease;
   
   @media (--pc) {
     padding-block: 10px;
   }
 
   &.is-scrolled {
-    box-shadow: 0px 3px 4px -4px #777;
+    background-color: rgb(var(--color-white-rgb) / 0.95);
   }
 }
 

@@ -93,7 +93,7 @@
  */
 
 :where(nav) :where(ol, ul) {
-  list-style-type: none;
+  // list-style-type: none; /* _base.scssで設定するためコメントアウト */
   padding: 0;
 }
 

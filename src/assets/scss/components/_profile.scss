@@ -1,4 +1,6 @@
 .c-profile__list {
+  list-style-type: revert;
+
   > li + li {
     --mt: 1em;
     margin-block-start: var(--mt);

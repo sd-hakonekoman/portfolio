@@ -2,6 +2,12 @@
    ========================================================================== */
 
 :root {
+  /* Font Size */
+  --text-base: calc(14rem / 16);
+  @media (--pc) {
+    --text-base: 1rem;
+  }
+
   /* Font Weight */
   --font-thin: 100; /* Thin (Hairline) */
   --font-extra-light: 200; /* Extra Light (Ultra Light) */
@@ -15,21 +21,36 @@
 
   /* Font Family */
   --font-gothic:
+    "Noto Sans JP",
     "Helvetica Neue",
     Arial,
     "Hiragino Kaku Gothic ProN",
     "Hiragino Sans",
-    "Noto Sans JP",
     sans-serif;
 
+  /* letter-spacing */
+  --tracking-base: 0.1em;
+
   /* Color */
-  --color-black: 8 19 26;
-  --color-black-rgb: rgb(var(--color-black));
+  --color-black-rgb: 8 19 26;
+  --color-black: rgb(var(--color-black-rgb));
+  --color-white-rgb: 255 255 255;
+  --color-white: rgb(var(--color-white-rgb));
+  --color-gray-1: #ebebeb;
+  --color-gray-2: #a2a9b1;
+
+  --card-border-color: var(--color-gray-1);
+  --card-background: var(--color-white-rgb);
+  --card-background: #fafafa;
+
+  --color-text-base: #333;
 
   /* 間隔 */
   --px-page: 14px;
-
   @media (--pc) {
     --px-page: 30px;
   }
+
+  /* border-radius */
+  --rounded-card: 16px;
 }

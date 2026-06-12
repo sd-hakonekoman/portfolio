@@ -3,8 +3,9 @@
   grid-template-rows: subgrid;
   grid-row: span 5;
   padding: 10px;
-  border: 1px solid #000;
-  border-radius: 5px;
+  border: 1px solid var(--card-border-color);
+  border-radius: var(--rounded-card);
+  background-color: var(--card-background);
 
   @media (--pc) {
     padding: 16px;
@@ -23,9 +24,15 @@
     > dd {
       display: flex;
       flex-wrap: wrap;
-      column-gap: 0.5em;
       margin-inline-start: 0;
     }
+  }
+}
+
+.c-work__link {
+  font-size: calc(12rem / 16);
+  @media (--pc) {
+    font-size: calc(14rem / 16);
   }
 }
 
