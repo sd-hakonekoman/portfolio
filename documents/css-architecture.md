@@ -136,12 +136,32 @@ BEMの概念をベースに命名します。
 
 Block  
 Block__Element  
-Block--Modifier
+--Modifier
 
 例.  
 .c-card  
 .c-card__title  
-.c-card--large
+--large
+
+### Modifier
+
+Modifier は単独では使わず、必ず Block または Element のクラスと組み合わせます。
+
+HTML例.  
+```html
+<article class="c-card --large">
+  <h2 class="c-card__title">Title</h2>
+</article>
+```
+
+SCSS例.  
+```scss
+.c-card {
+  &.--large {
+    inline-size: 100%;
+  }
+}
+```
 
 ## State
 
