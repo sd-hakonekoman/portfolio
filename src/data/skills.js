@@ -93,28 +93,18 @@ export const skills = [
     list: [
       {
         name: "Astro",
-        years: "2ヶ月",
+        years: "1年未満（2ヶ月）",
         description:
           "チュートリアルを学習済みです。<br>実務ではサイトの修正対応やAstroのバージョンアップ対応を行いました。",
       },
       {
-        name: "Vue.js (v2)",
-        years: "2ヶ月",
+        name: "Vue.js (v2) / Nuxt.js (v2)",
+        years: "1年未満（2ヶ月）",
         description: "LP制作で使用した経験があります。<br>既存LPの改修対応、既存LPを流用した新規LPの制作を行いました。",
       },
       {
-        name: "Nuxt.js",
-        years: "2ヶ月",
-        description: "LP制作で使用した経験があります。<br>既存LPの改修対応、既存LPを流用した新規LPの制作を行いました。",
-      },
-      {
-        name: "React",
-        years: "2ヶ月",
-        description: "LP制作で使用した経験があります。<br>既存LPの改修対応、既存LPを流用した新規LPの制作を行いました。",
-      },
-      {
-        name: "Next.js",
-        years: "2ヶ月",
+        name: "React / Next.js",
+        years: "1年未満（2ヶ月）",
         description: "LP制作で使用した経験があります。<br>既存LPの改修対応、既存LPを流用した新規LPの制作を行いました。",
       },
     ],
