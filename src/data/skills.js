@@ -132,8 +132,14 @@ export const skills = [
       {
         name: "Vite",
         description:
-          "学習中です。<br>ポートフォリオサイトで実際に使用してみたりしています。",
-        learning: true,
+          "個人開発において、HTML・CSS・SCSS・PostCSS・JavaScriptを扱う開発環境の構築に使用しています。",
+        noPracticalExperience: true,
+      },
+      {
+        name: "Local",
+        description:
+          "WordPressの学習のため、ローカル開発環境の構築に使用しています。実務での使用経験はありません。",
+        noPracticalExperience: true,
       },
     ],
   },
