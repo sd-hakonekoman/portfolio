@@ -78,7 +78,7 @@ export const skills = [
         name: "WordPress",
         years: 6,
         description:
-          "オリジナルテーマの制作から既存サイトの改修・運用まで対応可能です。",
+          "オリジナルテーマの制作・改修を中心に、ACFを用いたカスタムフィールド実装やカスタム投稿タイプの実装を経験しています。",
       },
       // {
       //   name: "microCMS",
